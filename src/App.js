@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import {
   LoginAsSeller,
   Register,
@@ -23,12 +23,12 @@ import {
   NotFound,
   ScrollToTop,
   PrivateRoute,
-} from "./router/index.js";
+  HashRouter } from "./router/index.js";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
         <Routes>
           <Route
@@ -238,9 +238,10 @@ function App() {
             }
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
 
 export default App;
+
